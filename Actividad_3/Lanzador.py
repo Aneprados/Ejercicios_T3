@@ -2,55 +2,55 @@
 from NaveEspacial import NaveEspacial
 from GestorNaves import GestorNaves
 
-def main():
-    # Lista de naves espaciales
-    naves = [
-        NaveEspacial("Cometa Veloz", 120, 10, 50),
-        NaveEspacial("Titán del Cosmos", 200, 15, 100),
-        NaveEspacial("GX-1", 90, 5, 6),
-        NaveEspacial("GX-2", 110, 8, 8),
-        NaveEspacial("Estrella Fugaz", 150, 12, 80),
-        NaveEspacial("Nebulosa", 180, 20, 120),
-        NaveEspacial("Aurora", 100, 6, 10),
-    ]
+class Lanzador:
+    def __init__(self):
+        pass
 
-    gestor = GestorNaves(naves)
+    def main(self):
+        # Lista de naves espaciales
+        naves = [
+            NaveEspacial("Cometa Veloz", 120, 10, 50),
+            NaveEspacial("Titán del Cosmos", 200, 15, 100),
+            NaveEspacial("GX-1", 90, 5, 6),
+            NaveEspacial("GX-2", 110, 8, 8),
+            NaveEspacial("Estrella Fugaz", 150, 12, 80),
+            NaveEspacial("Nebulosa", 180, 20, 120),
+            NaveEspacial("Aurora", 100, 6, 10),
+        ]
 
-    # Ordenar por nombre ascendente y longitud descendente
-    print("Naves ordenadas por nombre y longitud:")
-    for nave in gestor.ordenar_por_nombre_y_longitud():
-        print(nave)
+        gestor = GestorNaves(naves)
 
-    # Información de "Cometa Veloz" y "Titán del Cosmos"
-    print("\nInformación de 'Cometa Veloz' y 'Titán del Cosmos':")
-    for nave in gestor.obtener_informacion_naves(["Cometa Veloz", "Titán del Cosmos"]):
-        print(nave)
+        # Ordenar por nombre ascendente y longitud descendente
+        print("Naves ordenadas por nombre y longitud:")
+        for nave in gestor.ordenar_por_nombre_y_longitud():
+            print(nave)
 
-    # Cinco naves con mayor cantidad de pasajeros
-    print("\nCinco naves con mayor cantidad de pasajeros:")
-    for nave in gestor.obtener_cinco_mas_pasajeros():
-        print(nave)
+        # Información de "Cometa Veloz" y "Titán del Cosmos"
+        print("\nInformación de 'Cometa Veloz' y 'Titán del Cosmos':")
+        for nave in gestor.obtener_informacion_naves(["Cometa Veloz", "Titán del Cosmos"]):
+            print(nave)
 
-    # Nave que requiere mayor cantidad de tripulación
-    print("\nNave que requiere mayor cantidad de tripulación:")
-    print(gestor.obtener_nave_mas_tripulacion())
+        # Cinco naves con mayor cantidad de pasajeros
+        print("\nCinco naves con mayor cantidad de pasajeros:")
+        for nave in gestor.obtener_cinco_mas_pasajeros():
+            print(nave)
 
-    # Naves cuyo nombre comienza con "GX"
-    print("\nNaves cuyo nombre comienza con 'GX':")
-    for nave in gestor.obtener_naves_por_prefijo("GX"):
-        print(nave)
+        # Nave que requiere mayor cantidad de tripulación
+        print("\nNave que requiere mayor cantidad de tripulación:")
+        print(gestor.obtener_nave_mas_tripulacion())
 
-    # Naves que pueden llevar seis o más pasajeros
-    print("\nNaves que pueden llevar seis o más pasajeros:")
-    for nave in gestor.obtener_naves_con_pasajeros(6):
-        print(nave)
+        # Naves cuyo nombre comienza con "GX"
+        print("\nNaves cuyo nombre comienza con 'GX':")
+        for nave in gestor.obtener_naves_por_prefijo("GX"):
+            print(nave)
 
-    # Nave más pequeña y más grande
-    print("\nNave más pequeña:")
-    print(gestor.obtener_nave_mas_pequena())
-    print("\nNave más grande:")
-    print(gestor.obtener_nave_mas_grande())
+        # Naves que pueden llevar seis o más pasajeros
+        print("\nNaves que pueden llevar seis o más pasajeros:")
+        for nave in gestor.obtener_naves_con_pasajeros(6):
+            print(nave)
 
-
-if __name__ == "__main__":
-    main()
+        # Nave más pequeña y más grande
+        print("\nNave más pequeña:")
+        print(gestor.obtener_nave_mas_pequena())
+        print("\nNave más grande:")
+        print(gestor.obtener_nave_mas_grande())
