@@ -5,7 +5,5 @@ class NaveEspacial:
         self.tripulantes = tripulantes
         self.pasajeros = pasajeros
 
-    def __str__(self):
-        return f"Nombre: {self.nombre}, Longitud: {self.longitud}, Tripulantes: {self.tripulantes}, Pasajeros: {self.pasajeros}"
-
-
+    def __repr__(self):
+        return f"Nave(nombre={self.nombre}, longitud={self.longitud}, tripulantes={self.tripulantes}, pasajeros={self.pasajeros})"
