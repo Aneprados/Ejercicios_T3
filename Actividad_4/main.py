@@ -1,4 +1,8 @@
-from Lanzador import lanzador
+
+from Lanzador import Lanzador
+
 if __name__ == "__main__":
-    lanzador = lanzador()
+    lanzador = Lanzador()
     lanzador.ejecutar()
+    lanzador()
+    

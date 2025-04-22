@@ -1,5 +1,4 @@
-
-import Termino 
+from Termino import Termino
 
 class Polinomio:
     """Clase que representa un polinomio como un conjunto de términos."""
