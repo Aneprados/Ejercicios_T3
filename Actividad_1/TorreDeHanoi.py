@@ -1,3 +1,6 @@
+from Columna import Columna
+from Piedra import Piedra
+
 class TorreDeHanoi:
     def __init__(self, num_piedras):
         self.num_piedras = num_piedras
